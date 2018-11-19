@@ -24,9 +24,9 @@ app.use((req,res,next)=>{
   '\n');
  next();
 });
-app.use((req,res,next)=>{
-  res.render('maintain.hbs');
-});
+// app.use((req,res,next)=>{
+//   res.render('maintain.hbs');
+// });
 
 app.get('/', (req, res) => {
   res.render('home.hbs', {
