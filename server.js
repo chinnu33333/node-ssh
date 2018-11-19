@@ -16,17 +16,8 @@ hbs.registerHelper('getCurrentYear', () => {
 hbs.registerHelper('screamIt', (text) => {
   return text.toUpperCase();
 });
-app.use((req,res,next)=>{
- var low = new Date().toString();
- var log =`${low}: ${req.method} ${req.url}`;
- console.log(log);
- fs.appendFile('Server.log',log +
-  '\n');
- next();
-});
-// app.use((req,res,next)=>{
-//   res.render('maintain.hbs');
-// });
+
+
 
 app.get('/', (req, res) => {
   res.render('home.hbs', {
